@@ -1,0 +1,27 @@
+# Example Terraform variables file
+# Copy this to terraform.tfvars and customize for your environment
+
+# Required: S3 bucket name for hosting the dashboard
+bucket_name = "my-ec2-dashboard-bucket"
+
+# Optional: Custom dashboard title
+dashboard_title = "My Company EC2 Instances Dashboard"
+
+# Optional: Override allowed CIDR blocks (defaults include your networks)
+# allowed_cidr_blocks = [
+#   "10.240.0.0/16",    # Primary EC2 network
+#   "10.230.10.5/32",   # Specific host access
+#   "10.255.0.0/21",    # Management network
+#   "10.93.0.0/16",     # Corporate network 1
+#   "10.94.0.0/16",     # Corporate network 2
+#   "10.105.0.0/16",    # Corporate network 3
+#   "192.168.1.0/24"    # Add your additional networks
+# ]
+
+# Optional: Custom tags
+# tags = {
+#   Project     = "EC2Dashboard"
+#   Environment = "Production"
+#   Owner       = "Infrastructure Team"
+#   ManagedBy   = "Terraform"
+# }

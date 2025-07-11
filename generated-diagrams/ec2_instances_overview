@@ -1,0 +1,47 @@
+digraph "EC2 Instances Overview" {
+	graph [bgcolor=white fontcolor="#2D3436" fontname=Arial fontsize=16 label="EC2 Instances Overview" nodesep=0.60 pad=2.0 rankdir=TB ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	subgraph "cluster_US-West-2a (9 instances)" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="US-West-2a (9 instances)" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		c4e09859a193461996706fc99c952b8f [label="all-zook02.dev.cdm
+t3.small (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"937421e55bdd451884da91241052d96e" [label="all-registry02.dev.cdm
+t3.small (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"9e5224b55ef3478a8a90ed07321e1a3f" [label="all-registry03.dev.cdm
+t3.small (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"34e8dc2e97804f7ca48aef9f4922f61e" [label="ECS Instance - registry3
+t3.medium (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		bcd8485243834af3ac06b45e5be67c01 [label="joe-dev-01.dev.cdm
+t3.large (stopped)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		c957fc156f90422c994543419071542c [label="tuxcare-alma8_02
+t3.medium (stopped)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"9868f4dfda144f45aabecf929658e1ba" [label="tuxcare-alma8_03
+t3.medium (stopped)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"2edd2e02a3e0465198b9afb334dc7e49" [label="tuxcare-alma8_04
+t3.medium (stopped)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		b0d0ff0776454537b2a0faa83cd1d1b3 [label="tuxcare-alma8_01
+t3.medium (stopped)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"99fd92d65b164e09bbda75bf6482ea2c" [label="tuxcare-alma8_05
+t3.medium (stopped)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+	}
+	subgraph "cluster_US-West-2b (9 instances)" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="US-West-2b (9 instances)" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		e28fd57ead5044ac9028485a8f6dda51 [label="all-zook03.dev.cdm
+t3.small (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		dfcb894486c647369664fcb37b8cb1a7 [label="all-registry01.dev.cdm
+t3.small (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		acb3aa9bd193496499cb7fe1d6d7c772 [label="all-zook01.dev.cdm
+t3.small (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		cfbb0728fce14c52b078fad9b0afc8ca [label="adam-test
+t2.micro (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"67a6b4c6040e438fa9b6e77a27596931" [label="ECS Instance - registry3
+t3.medium (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"811ca2f867ed4cffb6566eff9596b84b" [label="paul-test-000
+t3.small (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"60cc3a4788224ad585ad2bff3724535c" [label="api-gateway-test
+t2.small (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+		"51bf9558b5a245a8a8b202b7206b2b01" [label="pantheon-bridge
+t3.micro (running)" height=2.3 image="/Users/jsimpson6/.cache/uv/archive-v0/FJhOXD-YKcAxb5rsFcMpU/lib/python3.13/site-packages/resources/aws/compute/ec2.png" shape=none]
+	}
+}

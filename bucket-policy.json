@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "RestrictToInternalNetwork",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "arn:aws:s3:::jsimpson-ec2-instances-list/*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "10.240.0.0/16"
+                    ]
+                }
+            }
+        }
+    ]
+}
