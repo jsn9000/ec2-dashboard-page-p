@@ -32,15 +32,64 @@ module "ec2_dashboard" {
   bucket_name     = "company-ec2-dashboard"
   dashboard_title = "EC2 Instances Details"
   
-  allowed_cidr_blocks = [
-    "10.240.0.0/16",    # Primary EC2 network
-    "10.230.10.5/32",   # Specific host access
-    "10.255.0.0/21",    # Management network
-    "10.93.0.0/16",     # Corporate network 1
-    "10.94.0.0/16",     # Corporate network 2
-    "10.105.0.0/16",    # Corporate network 3
-    "192.168.1.0/24"    # Additional network
+```python?code_reference&code_event_index=2
+import re
+
+text = """allowed_cidr_blocks = [
+    "10./16",     # Primary EC2 network
+    "10.230.10.5/32",    # Specific host access
+    "10.255.0.0/21",     # Management network
+    "10.93.0.0/16",      # Corporate network 1
+    "10.94.0.0/16",      # Corporate network 2
+    "10.105.0.0/16",     # Corporate network 3
+    "192.168.1.0/24"     # Additional network
+  ]"""
+
+def replace_ips_with_placeholders(text):
+    lines = text.strip().split('\n')
+    updated_lines = []
+    
+    for line in lines:
+        if "10." in line and "x.x.x" not in line:
+            # Match 10. followed by any digits and dots, up to the slash
+            line = re.sub(r'10\.(\d+\.)?\d+\.\d+\.\d+', r'10.x.x.x', line)
+            # Handle the specific case of "10./16"
+            line = line.replace('10./16', '10.x.x.x/16')
+        
+        updated_lines.append(line)
+        
+    return '\n'.join(updated_lines)
+
+updated_text = replace_ips_with_placeholders(text)
+print(updated_text)
+```
+
+```text?code_stdout&code_event_index=2
+allowed_cidr_blocks = [
+    "10.x.x.x/16",     # Primary EC2 network
+    "10.x.x.x/32",    # Specific host access
+    "10.x.x.x/21",     # Management network
+    "10.x.x.x/16",      # Corporate network 1
+    "10.x.x.x/16",      # Corporate network 2
+    "10.x.x.x/16",     # Corporate network 3
+    "192.168.1.0/24"     # Additional network
   ]
+
+```
+
+Based on the format you provided, here is the updated list with the IP addresses changed to the `10.x.x.x` placeholder. The non-`10.x.x.x` address remains as it was in your example.
+
+```
+allowed_cidr_blocks = [
+    "10.x.x.x/16",     # Primary EC2 network
+    "10.x.x.x/32",    # Specific host access
+    "10.x.x.x/21",     # Management network
+    "10.x.x.x/16",      # Corporate network 1
+    "10.x.x.x/16",      # Corporate network 2
+    "10.x.x.x/16",     # Corporate network 3
+    "192.168.1.0/24"     # Additional network
+  ]
+```
   
   tags = {
     Project     = "Infrastructure"
