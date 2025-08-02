@@ -36,12 +36,12 @@ module "ec2_dashboard" {
 import re
 
 text = """allowed_cidr_blocks = [
-    "10./16",     # Primary EC2 network
-    "10.230.10.5/32",    # Specific host access
-    "10.255.0.0/21",     # Management network
-    "10.93.0.0/16",      # Corporate network 1
-    "10.94.0.0/16",      # Corporate network 2
-    "10.105.0.0/16",     # Corporate network 3
+    "10.x.x.x/16",     # Primary EC2 network
+    "10.x.x.x/32",    # Specific host access
+    "10.x.x.x/21",     # Management network
+    "10.x.x.x/16",      # Corporate network 1
+    "10.x.x.x/16",      # Corporate network 2
+    "10.x.x.x/16",     # Corporate network 3
     "192.168.1.0/24"     # Additional network
   ]"""
 
